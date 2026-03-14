@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Музей</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>{% block header %}{% endblock %}</h1>
+     {% block nav %}
+      <nav>
+        <a href="{{ url_for('index')}}">На  главную</a>
+      </nav>
+    {% endblock %}
+    </header>
+    <main>
+      {% block content %}
+        {% block image %}{% endblock %}
+        <p>{% block description %}{% endblock %}</p>
+        <h2>Функционал</h2>
+
+        {% block functions %}{% endblock %}
+        <aside>
+          <h2>Авторство</h2>
+          {% block credit %}{% endblock %}
+        </aside>
+      {% endblock %}
+    </main>
+    <footer>
+      {% block footer %}{% endblock %}
+    </footer>
+  </body>
+</html>
