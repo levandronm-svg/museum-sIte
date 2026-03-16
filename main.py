@@ -17,9 +17,9 @@ def exhibit(num):
     return render_template("v2/exhibit-" + num + ".html")
 
 
-@app.route("/photo-<num>")
-def photo(num):
-    return render_template("photo-" + num + ".html")
+@app.route("/qr-<num>")
+def qr(num):
+    return render_template("qr-" + num + ".html")
 
 
 if __name__ == '__main__':
